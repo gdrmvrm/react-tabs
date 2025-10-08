@@ -1,8 +1,8 @@
 import React from 'react';
 import JobDuties from './JobDuties';
 
-const JobInfo = ({ jobs }) => {
-  const { company, dates, duties, title } = jobs[0];
+const JobInfo = ({ jobs, currentJob }) => {
+  const { company, dates, duties, title } = jobs[currentJob];
   return (
     <article className="job-info">
       <h3>{title}</h3>
