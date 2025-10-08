@@ -1,4 +1,5 @@
 import React from 'react';
+import JobDuties from './JobDuties';
 
 const JobInfo = ({ jobs }) => {
   const { company, dates, duties, title } = jobs[0];
@@ -6,7 +7,8 @@ const JobInfo = ({ jobs }) => {
     <article className="job-info">
       <h3>{title}</h3>
       <span className="job-company">{company}</span>
-      <p className='job-date'>{dates}</p>
+      <p className="job-date">{dates}</p>
+      <JobDuties duties={duties} />
     </article>
   );
 };
